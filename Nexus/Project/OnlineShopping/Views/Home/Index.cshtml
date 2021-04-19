@@ -1,0 +1,703 @@
+﻿@{
+    ViewBag.Title = "Online Shopping : Home Page";
+    Layout = "~/Views/Shared/_FrontLayout.cshtml";
+    List<OnlineShopping.DAL.Tbl_Product> FeaturedProducts = (List<OnlineShopping.DAL.Tbl_Product>)ViewBag.FeaturedProducts;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+</head>
+
+<body data-spy="scroll" data-offset="25">
+      
+            <div class="brand-promotion">
+                <div class="container">
+                    <div class="media row">
+                        <div class="col-sm-4">
+                            <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 300ms;">
+                                <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                                <div class="media-body">
+                                    <h2>Ask Us Anything</h2>
+                                    <p>Any Communication problem? Nexus is the right place to deal, <br />Ask us any time!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 400ms;">
+                                <i class="fa fa-laptop fa-4x pull-left"></i>
+                                <div class="media-body">
+                                    <h2>                                      
+                                        Wireless Access                                     
+                                    </h2>
+                                    <p>                                        
+                                        WiBAS-Connect compact all-outdoor MW radio offers high-quality broadband access 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 500ms;">
+                                <i class="fa fa-headphones fa-4x pull-left"></i>
+                                <div class="media-body">
+                                    <h2>Full Support</h2>
+                                    <p>Will be there for your service all the time, Become our member and have our support.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/SLIDER SECTION -->
+            <section id="home" class="sliderwrapper clearfix">
+
+                <div class="tp-banner-container">
+                    <div class="tp-banner">
+                        <ul>
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                                <!-- MAIN IMAGE -->
+                                <img src="~/slider-images/IMG3.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                                <div class="tp-dottedoverlay twoxtwo"></div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption rev-video  customin customout start"
+                                     data-x="center"
+                                     data-hoffset="0"
+                                     data-y="140"
+                                     data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                     data-speed="1000"
+                                     data-start="500"
+                                     data-easing="Back.easeInOut"
+                                     data-endspeed="300">
+                                    <hr class="topline"><h2>Mission <br> Communication <br> Provider </h2><hr class="bottomline">
+                                </div>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption rev-video2 customin customout start"
+                                     data-x="center"
+                                     data-hoffset="0"
+                                     data-y="340"
+                                     data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                     data-speed="2200"
+                                     data-start="500"
+                                     data-easing="Back.easeInOut"
+                                     data-endspeed="300">
+                                    <p>Be a leader in innovation & development for wireless and information <br />
+                                    communications systems.  Strive to supply customers with superior total wireless<br />
+                                    solutions and services.</p>
+                                </div>
+                            </li>
+
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                                <!-- MAIN IMAGE -->
+                                <img src="~/demos/giphy.gif" alt="slidebg2" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                                <div class="tp-dottedoverlay twoxtwo"></div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption rev-video skewfromleft customout"
+                                     data-x="center"
+                                     data-y="140"
+                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                     data-speed="800"
+                                     data-start="1500"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="on"
+                                     style="z-index: 6">
+                                    <hr class="topline"><h2>Global Presence <br>Apperance Outside</h2><hr class="bottomline">
+                                </div>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption rev-video2 skewfromright customout"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="340"
+                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                     data-speed="800"
+                                     data-start="1700"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="on"
+                                     style="z-index: 7">
+                                    <p>With corporate headquarters in Hong Kong, Comba has  30+ offices in China and 10+ offices in Asia</p>
+                                </div>
+                            </li>
+
+                            <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                                <!-- MAIN IMAGE -->
+                                <img src="~/demos/download.jpg" alt="slidebg3" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                                <div class="tp-dottedoverlay twoxtwo"></div>
+
+                                <!-- LAYER NR. 3 -->
+                                <div class="tp-caption rev-video skewfromleft customout"
+                                     data-x="center"
+                                     data-y="140"
+                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                     data-speed="800"
+                                     data-start="1500"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="on"
+                                     style="z-index: 6">
+                                    <hr class="topline"><h2>Brand Values<br>with your Branding</h2><hr class="bottomline">
+                                </div>
+
+                                <!-- LAYER NR. 4 -->
+                                <div class="tp-caption rev-video2 skewfromright customout"
+                                     data-x="center" data-hoffset="0"
+                                     data-y="340"
+                                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                     data-speed="800"
+                                     data-start="1700"
+                                     data-easing="Power4.easeOut"
+                                     data-endspeed="300"
+                                     data-endeasing="Power1.easeIn"
+                                     data-captionhidden="on"
+                                     style="z-index: 7">
+                                    <p>Professionalism, Integrity, Innovative, Reliability</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="tp-bannertimer"></div>
+                    </div>
+                </div>
+            </section><!-- end slider-wrapper -->
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <section id="features" class="feature-wrapper">
+                <div class="container">
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                        <div class="widget">
+                            <h3> WHY Choose Nexus?</h3>
+                            <p>Nexus Communication System is an Organization system that provides two services like the tele-communications and Internet Services. It is one of the major vendors at the local place. It has now extended its service all over the territory due to the increase in demand for the internet service.</p>
+                            <div id="accordion-second" class="clearfix">
+                                <div class="accordion" id="accordion2">
+                                    <div class="accordion-group">
+                                        <div class="accordion-heading">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                                <em class="fa fa-plus icon-fixed-width"></em>What are Dial-up connections?
+                                            </a>
+                                        </div>
+                                        <div id="collapseOne" class="accordion-body collapse">
+                                            <div class="accordion-inner">
+                                                A dial-up connection is any connection that is connected through a regular phone line. When that phone line is connected to a modem and then configured to dial a specific number, a user can access the Internet.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-group">
+                                        <div class="accordion-heading">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                                <em class="fa fa-plus icon-fixed-width"></em>What are Broadband connections?
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="accordion-body collapse">
+                                            <div class="accordion-inner">
+                                                Broadband Internet service truly is the most used form of Internet access because of its high access speeds; it is offered in four different forms, DSL (or Digital Subscriber Line), also fiber-optic, cable, and satellite. The old dial-up connection is the only non-broadband internet service available.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-group">
+                                        <div class="accordion-heading">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                                <em class="fa fa-plus icon-fixed-width"></em>What are internet service providers?
+                                            </a>
+                                        </div>
+                                        <div id="collapseThree" class="accordion-body collapse">
+                                            <div class="accordion-inner">
+                                                An Internet Service Provider (ISP) is the industry term for the company that is able to provide you with access to the Internet, typically from a computer. If you hear someone talking about the Internet and they mention their "provider," they're usually talking about their ISP.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-group">
+                                        <div class="accordion-heading">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                                                <em class="fa fa-plus icon-fixed-width"></em>what is Internet?
+                                            </a>
+                                        </div>
+                                        <div id="collapseFour" class="accordion-body collapse">
+                                            <div class="accordion-inner">
+                                                The Internet, sometimes called simply "the Net," is a worldwide system of computer networks -- a network of networks in which users at any one computer can, if they have permission, get information from any other computer (and sometimes talk directly to users at other computers)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-group">
+                                        <div class="accordion-heading">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                                                <em class="fa fa-plus icon-fixed-width"></em>What is telecommunication?
+                                            </a>
+                                        </div>
+                                        <div id="collapseFive" class="accordion-body collapse">
+                                            <div class="accordion-inner">
+                                                Telecommunication is the transmission of signs, signals, messages, words, writings, images and sounds or information of any nature by wire, radio, optical or other electromagnetic systems. Telecommunication occurs when the exchange of information between communication participants includes the use of technology.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end accordion -->
+                            </div><!-- end accordion first -->
+                        </div><!-- end widget -->
+                    </div><!-- end col-lg-6 -->
+
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                        <div class="widget">
+                            <h3>LATEST NEWS</h3>
+                            <div id="owl-blog" class="owl-carousel">
+                                <div class="blog-carousel">
+                                    <div class="entry">
+                                        <img src="~/demos/images.jpg" alt="" class="img-responsive">
+                                        <div class="magnifier">
+                                            <div class="buttons">
+                                                <a class="st" rel="bookmark" href="blog-single-sidebar.html"><i class="fa fa-link"></i></a>
+                                            </div><!-- end buttons -->
+                                        </div><!-- end magnifier -->
+                                        <div class="post-type">
+                                            <i class="fa fa-picture-o"></i>
+                                        </div><!-- end pull-right -->
+                                    </div><!-- end entry -->
+                                    <div class="blog-carousel-header">
+                                        <h3><a title="" href="blog-single-sidebar.html">America's BroadBand Slower!</a></h3>
+                                        <div class="blog-carousel-meta">
+                                            <span><i class="fa fa-calendar"></i> April 01, 2014</span>
+                                            <span><i class="fa fa-comment"></i> <a href="#">03 Comments</a></span>
+                                            <span><i class="fa fa-eye"></i> <a href="#">84 Views</a></span>
+                                        </div><!-- end blog-carousel-meta -->
+                                    </div><!-- end blog-carousel-header -->
+
+
+                                </div><!-- end blog-carousel -->
+                            </div><!-- end owl-blog -->
+                        </div><!-- end widget -->
+                    </div><!-- end col-lg-6 -->
+                </div><!-- end container -->
+            </section><!-- end grey-wrapper -->
+            <!--/ ABOUT SECTION -->
+            <section id="about" class="about-wrapper">
+                <div class="container">
+                    <div data-scroll-reveal="enter from the bottom after 0.3s" class="title text-center">
+                        <h2>About</h2>
+                        <p>Nexus Service Marketing</p>
+                        <hr>
+                    </div><!-- end title -->
+
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div data-scroll-reveal="enter from the bottom after 0.4s" class="about-box">
+                                <div class="about-border"> <i class="fa fa-tablet aligncenter"></i></div>
+                                <h3>Service</h3>
+                                <p>We sit at the NEXUS of fleet and mobility solutions and the challenges that companies face </p>
+                            </div>
+                        </div><!-- end column -->
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <div class="about-border"> <i class="fa fa-bars aligncenter"></i></div>
+                                <h3>EXCELLENT FEATURES</h3>
+                                <p>Our audience are all stakeholders of fleet & mobility decisions HR – Mobility – Fleet – Travel – Facility – Finance on an international level.</p>
+                            </div>
+                        </div><!-- end column -->
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <div class="about-border"> <i class="fa fa-folder-o aligncenter"></i></div>
+                                <h3>Global</h3>
+                                <p>Our media addresses issues for decision makers on a global level, in Europe, in Latin America and specifically on new mobility solutions</p>
+                            </div>
+                        </div><!-- end column -->
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div data-scroll-reveal="enter from the bottom after 0.5s" class="about-box">
+                                <div class="about-border"> <i class="fa fa-gear aligncenter"></i></div>
+                                <h3>Simple & Easy</h3>
+                                <p>Our media cover all aspects of the ECO system of fleet and mobility management.Financial models – Shared – New Energies – Connected – Last Mile </p>
+                            </div>
+                        </div><!-- end column -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+
+                <div class="clearfix">
+                    <div class="widget-wrapper">
+                        <div class="container">
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                                <div class="widget">
+                                    <h3>WHY <span>Nexus</span> IS Great &amp; Reliable?</h3>
+                                    <p>
+                                        e provide daily news, in-depth analysis and expert commentary across a comprehensive range of hot topics, including Digital Transformation, 4G/5G, AI, IoT, NFV, SDN, Security, VR/AR and much more.
+
+                                        Our impartial investigation of the global telecoms industry is supplemented by regular in-depth features, executive interviews and opinion pieces.<br />
+
+                                        <b>Nexus</b> Intelligence, the analysis arm of the website works with its partners to create educational services for its readership. A consultative and collaborative approach with our intelligence team ensures a widely respected and impartial perspective to effectively deliver insight and analysis through the use of webinars, whitepapers, bespoke surveys and more.
+
+                                        Our annual awards show, the Global Telecoms Awards (GLOTELS), showcase international talent from across the global communications sector. The awards are attended by the industry’s most innovative and influential companies, making it a must ‘attend event’ for anyone involved in telecoms.<br />
+
+                                        More than 124,000 unique global communications professionals visit and interact with Telecoms.com each month and another 46,000 subscribe to Telecoms.com’s popular daily newsletter.
+
+                                        Telecoms.com is part of the Light Reading Group, Owned by Informa Plc. <a href="#"> Read More </a>
+                                    </p>
+
+                                </div><!-- end widget -->
+                            </div><!-- end col-lg-6 -->
+
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                <div class="widget">
+                                    <h3>OUR <span>POWERFUL</span> SKILLS!</h3>
+                                    <div id="skills" class="skills_bar">
+                                        <small>DialUp-Connections</small>
+                                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                                                <span class="skill_count">90%</span>
+                                            </div>
+                                        </div><!-- end progress -->
+                                        <small>BroadBand Connections</small>
+                                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                <span class="skill_count">80%</span>
+                                            </div>
+                                        </div><!-- end progress -->
+                                        <small>Products Sales</small>
+                                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                                <span class="skill_count">90%</span>
+                                            </div>
+                                        </div><!-- end progress -->
+                                        <small>Customer Support</small>
+                                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                                <span class="skill_count">90%</span>
+                                            </div>
+                                        </div><!-- end progress -->
+                                        <small>Internet Service</small>
+                                        <div class="progress wow slideInLeft animated" style="visibility: visible;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
+                                                <span class="skill_count">80%</span>
+                                            </div>
+                                        </div><!-- end progress -->
+                                    </div><!-- end skills_bar -->
+                                </div><!-- end widget -->
+                            </div><!-- end col-lg-6 -->
+                        </div><!-- end container -->
+                    </div>
+            </div>2</section><!-- End About Section -->
+            <!--/ COUNT SECTION -->
+            <section id="count_parallax" class="parallax" style="background-image: url('demos/imagess.jpg');" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="stat f-container">
+                            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="milestone-counter">
+                                    <i class="fa fa-user fa-3x"></i>
+                                    <span class="stat-count highlight">122</span>
+                                    <div class="milestone-details">Happy Customers</div>
+                                </div>
+                            </div>
+                            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="milestone-counter">
+                                    <i class="fa fa-globe fa-3x"></i>
+                                    <span class="stat-count highlight">4226</span>
+                                    <div class="milestone-details">DialUp</div>
+                                </div>
+                            </div>
+                            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="milestone-counter">
+                                    <i class="fa fa-trophy fa-3x"></i>
+                                    <span class="stat-count highlight">14</span>
+                                    <div class="milestone-details">Internet</div>
+                                </div>
+                            </div>
+                            <div class="f-element col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="milestone-counter">
+                                    <i class="fa fa-phone fa-3x"></i>
+                                    <span class="stat-count highlight">232</span>
+                                    <div class="milestone-details">BroadBand</div>
+                                </div>
+                            </div>
+                        </div><!-- stat -->
+                    </div><!-- end container -->
+                </div><!-- end overlay -->
+            </section>
+
+            <section>
+                <div>
+                    <!-- TESTIMONIAL SECTION -->
+                    <div class="testimonial text-center">
+                        <h2 class="three" data-scroll-reveal="enter from the bottom after 0.2s">And What They Say</h2>
+                    </div><!-- end title -->
+
+                    <div id="testimonial" class="owl-carousel owl-theme text-center">
+                        <div class="testimonial" data-scroll-reveal="enter from the bottom after 0.3s">
+                            <p>Your service is briiliant and the Products no Words to describe, Great job! </p>
+                            <h1> DANIEL Smith </h1>
+                        </div>
+                        <div class="testimonial">
+                            <p>Great Products and Service Keep it up!</p>
+                            <h1> DANIEL Smith </h1>
+                        </div>
+                        <div class="testimonial">
+                            <p>Fantastic! Suggest everyone to connect with Nexus Service Marketing</p>
+                            <h1> DANIEL Smith </h1>
+                        </div>
+                    </div><!-- end #testimonial -->
+
+                    <div class="customNavigation">
+                        <a class="btn prev"><i class="fa fa-angle-left fa-2x"></i></a>
+                        <a class="btn next"><i class="fa fa-angle-right fa-2x"></i></a>
+                    </div><!-- end customnav -->
+                </div> <!-- end container -->
+            </section><!-- Service and Testimonial End -->
+            <!--/ SKILL SECTION -->
+            <section id="skills_parallax" class="parallax" style="background-image: url('demos/download(2).jpg');" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+                <div class="overlay">
+                    <div class="container">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="skill">
+                                <span class="chart" data-bar-color="#fff" data-percent="50"><span class="percent"></span></span>
+                                <h3>DialUp</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="skill">
+                                <span class="chart" data-bar-color="#fff" data-percent="70"><span class="percent"></span></span>
+                                <h3>BroadBand</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="skill">
+                                <span class="chart" data-bar-color="#fff" data-percent="99"><span class="percent"></span></span>
+                                <h3>Internet</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="skill">
+                                <span class="chart" data-bar-color="#fff" data-percent="100"><span class="percent"></span></span>
+                                <h3>CUSTOMER SUPPORT</h3>
+                            </div>
+                        </div>
+                    </div><!-- end container -->
+                </div><!-- end overlay -->
+            </section><!-- End  Skill parallax -->
+            <!--PRICING SECTION  -->
+            <section id="pricing" class="dark-wrapper">
+                <div class="container">
+                    <div class="title text-center">
+                        <h2>Pricing Structure</h2>
+                    </div><!-- end title -->
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-effect="helix">
+                            <div class="pricing-box">
+                                <span class="hideme"><i class="fa fa-star bigstar"></i></span>
+                                <div class="title"><h3>DialUp Connection</h3></div>
+                                <div class="price">
+                                    <p class="price-value"><sub>$</sub> 75</p>
+                                    <p class="price-month">Per month</p>
+                                </div>
+                                <ul class="pricing clearfix">
+                                    (A)Hourly Basis
+                                    <li>
+                                        (i).	10 Hrs. – 50$ (validity is for one Month)
+                                    </li>
+                                    <li>  (ii).	30 Hrs. – 130$ (validity is for 3 Months)</li>
+                                    <li> (iii).	60 Hrs. – 260$ (validity is for 6 Months)</li>
+                                    (B)	Unlimited 28Kbps.
+
+                                    <li>
+                                        (i).	Monthly – 75$
+                                    </li>
+                                    <li>
+                                        (ii).	Quarterly – 150$
+                                    </li>
+
+                                    (C)	Unlimited 56 Kbps.
+
+                                    <li>
+                                        (i).	Monthly – 100$
+                                    </li>
+                                    <li>  (ii).	Quarterly – 180$</li>
+
+                                </ul>
+                                <a class="jtbtn" href="#">order now</a>
+                            </div><!-- Pricing Box -->
+                        </div><!-- Column 1 -->
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-effect="helix">
+                            <div class="pricing-box">
+                                <span class="hideme"><i class="fa fa-star bigstar"></i></span>
+                                <div class="title"><h3>Broad Band Connection</h3></div>
+                                <div class="price">
+                                    <p class="price-value"><sub>$</sub>225</p>
+                                    <p class="price-month">Per month</p>
+                                </div>
+                                <ul class="pricing clearfix">
+                                    (A)	Hourly Basis
+
+                                    <li>(i).	30 Hrs. – 175$ (validity is for 1 Month)</li>
+                                    <li>
+                                        (ii).	60 Hrs. – 315$ (validity is for 6 Months)
+                                    </li>
+                                    <li>
+                                        (iii).	20 Hrs. – 215$ (validity is for 2 Months)
+                                    </li>
+                                    
+                                    (B)	Unlimited 64Kbps.
+
+                                    <li>
+                                        (i).	Monthly – 225$
+                                    </li>
+                                    <li>
+                                        (ii).	Quarterly – 400$
+                                    </li>
+
+                                    (C)	Unlimited 128 Kbps.
+
+                                    <li>
+                                        (i).	Monthly – 350$
+                                    </li>
+                                    <li>  (ii).	Quarterly – 445$</li>
+
+
+                                </ul>
+                                <a class="jtbtn" href="#">order now</a>
+                            </div><!-- Pricing Box -->
+                        </div><!-- Column 2 -->
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-effect="helix">
+                            <div class="pricing-box">
+                                <span class="hideme"><i class="fa fa-star bigstar"></i></span>
+                                <div class="title"><h3>Land Line Connection</h3></div>
+                                <div class="price">
+                                    <p class="price-value"><sub>$</sub>35</p>
+                                    <p class="price-month">Per month</p>
+                                </div>
+                                <ul class="pricing clearfix">
+                                    (A)	Local Plan = Rental + Call charges
+
+                                    <li>(i).	Unlimited - 75$</li>
+                                    <li>
+                                        (ii).	Monthly Plan – 35$
+                                    </li>
+                                    <li>
+                                        (iii).	Weekly – 25$
+                                    </li>
+                                    <li>
+                                        (iv).	2 days – 5$
+                                    </li>
+                                    (B)	STD Plan :
+
+                                    <li>
+                                        (i).	Monthly – 125$
+                                    </li>
+
+                                    <li>
+                                        (ii).	Weekly – 105$
+                                    </li>
+
+                                    <li>
+                                        (iii).	Half - Yearly – 420$ (Valid for a month)
+                                    </li>
+
+
+                                    <li> (iV).	Yearly – $<br /> (Valid for an year)</li>
+
+
+                                </ul>
+                                <a class="jtbtn" href="#">order now</a>
+                            </div><!-- Pricing Box -->
+                        </div><!-- Column 3 -->
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" data-effect="helix">
+                            <div class="pricing-box">
+                                <span class="hideme"><i class="fa fa-star bigstar"></i></span>
+                                <div class="title"><h3>	Security Deposit</h3></div>
+                                <div class="price">
+                                    <p class="price-value"><sub>$</sub>299</p>
+                                    <p class="price-month">Per month</p>
+   
+                                </div>
+                                <ul class="pricing clearfix">
+                                    <li>It is the charge that will be refunded back to the customer during the time of withdrawal or cancellation. In general it will be charged as follows for the type of the connection</li>
+                                    <li>(A)	Dial – Up Connection : 325$</li>
+                                    <li>
+                                        (B)	Broad Band Connection : 500$
+                                    </li>
+                                    <li>  (C)	LandLine Connection : 250$</li>
+                                    <li>  (D)	All : 1075$ <br />(Valid for an year)</li>
+
+                                </ul>
+                                <a class="jtbtn" href="#">order now</a>
+                            </div><!-- Pricing Box -->
+                        </div><!-- Column 4 -->
+
+                    </div>
+                    <!-- end row -->
+                    <!--End Slider--> <!--Start Featured Professionals--> <div class="featuredProfessionals">
+                        <div class="container">
+                            <h1>Featured Products</h1>
+                            <div class="professionSLider">
+                                <div class="profSlider">
+                                    @foreach (var featured in FeaturedProducts)
+                                    {
+                                        <div class="item">
+                                            <div class="profPerson">
+
+                                                @if (File.Exists(Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["ProductImage"] + "Medium/" + featured.ProductId + "_" + featured.ProductImage)))
+                                                {
+                                                    <img class="ProfImg" title="Click to view product detail" style="cursor:pointer;" onclick="window.location.href ='/search/productdetail?pId=@featured.ProductId'" src="@(System.Configuration.ConfigurationManager.AppSettings["ProductImage"] + "Medium/" + featured.ProductId+"_"+featured.ProductImage)" />
+                                                }
+                                                else
+                                                {
+                                                    <img class="ProfImg" title="Click to view product detail" style="cursor:pointer;" onclick="window.location.href ='/search/productdetail?pId=@featured.ProductId'" src="@(System.Configuration.ConfigurationManager.AppSettings["ProductImage_Default_Medium"])" alt="" />
+                                                }
+                                                <div class="profMid clearfix">
+                                                    <h2 title="Click to view product detail" style="cursor:pointer;"><a href="/search/productdetail?pId=@featured.ProductId">  @featured.ProductName</a></h2>                                 <div class="leftprof fl">
+                                                        <text>
+                                                            Category <a title="Products of this category" style="cursor:pointer;" href="/search?searchkey=@featured.Tbl_Category.CategoryName">@featured.Tbl_Category.CategoryName</a>
+                                                        </text>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profLast clearfix">
+                                                <div class="leftprofLast fl"><h4>Price</h4></div>
+                                                <div class="rightprofLast fr"><h5>@(featured.Price)</h5></div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="left-symbol"><img src="/Images/sliderRightarrow.png" alt="images"></div>             <div class="right-symbol"><img src="/Images/sliderLeftarrow.png" alt="images"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Featured Professionals-->
+            </section><!-- End Pricing -->
+            <!-- SECTION CLOSED -->
+       
+    
+        
+    @section Scripts{
+        <script>
+      window.onload = function () {
+      if ('@Request.QueryString["returnUrl"]' != '') {
+       $('#returnUrl').val('@Request.QueryString["returnUrl"]')
+       $('.loginpopup').trigger('click');
+    }
+
+    if ('@(Request.UrlReferrer !=null ?Request.UrlReferrer.AbsolutePath.ToLower():"")' == '/account/resetpassword') {
+                   $('.loginpopup').trigger('click');
+    }
+                          if('@TempData["VerificationLinlMsg"]'!='')             {
+     swal('@TempData["VerificationLinlMsg"]', '', 'success');
+     }         }     </script> }
+
+    </body>
+</html>

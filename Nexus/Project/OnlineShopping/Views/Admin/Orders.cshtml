@@ -1,0 +1,95 @@
+﻿@model List<OnlineShopping.DAL.Tbl_Cart>
+@{
+    ViewBag.Title = "Orders";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    var orders = Model.GroupBy(i => i.ProductId).Select(i => i.FirstOrDefault()).ToList();
+}
+    <div class="rightpart">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item active">Orders</li>
+
+            </ol>
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    Orders
+                    <div class="dashBx">
+                         <div class="card-body">
+                             <div class="table-responsive dashTable" id="rootId">
+
+                                 @if (orders.Count() > 0)
+                                 {
+                                     <table id="tblId" class="table table-bordered" width="100%" cellspacing="0">
+                                         <thead>
+                                             <tr>
+                                                 <th>Sr. No.</th>
+                                                 <th>Product</th>
+                                                 <th>Category</th>
+                                                 <th>Price</th>
+                                                 <th>Orders Count</th>
+                                                 <th>Action</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody>
+                                             @foreach (var item in orders)
+                                             {
+                                                 <tr>
+                                                     <td>@(orders.IndexOf(item) + 1)</td>
+                                                     <td><a style="color:cornflowerblue" title="Click to see the product detail" href="/admin/ProductDetail?productId=@item.ProductId"> @item.Tbl_Product.ProductName</a></td>
+                                                     <td>@item.Tbl_Product.Tbl_Category.CategoryName</td>
+                                                     <td>@item.Tbl_Product.Price</td>
+                                                     <td><a style="color:cornflowerblue" href="/admin/orderdetail?productId=@item.ProductId" title="Click to view order detail"> @Model.Where(i => i.ProductId == item.ProductId).Count()</a></td>
+                                                     <td class="ListButtons">
+                                                         @Html.ActionLink("View Deatil", "orderdetail", "admin", new { productId = item.ProductId }, new { @class = "btn btn-primary" })
+                                                     </td>
+                                                 </tr>
+                                             }
+                                         </tbody>
+                                     </table>
+                                 }
+                                 else
+                                 {
+                                     <table id="tblId" class="table table-bordered" width="100%" cellspacing="0">
+                                         <thead>
+                                             <tr>
+                                                 <th>Sr. No.</th>
+                                                 <th>Product</th>
+                                                 <th>Category</th>
+                                                 <th>Orders Count</th>
+                                                 <th>Action</th>
+                                             </tr>
+                                         </thead>
+                                         <tbody>
+                                             <tr>
+                                                 <td class="NoRecord" colspan="5">
+                                                     <center><h5>No records found</h5></center>
+
+                                                 </td>
+                                             </tr>
+                                         </tbody>
+                                     </table>
+                                 }
+                             </div>
+                    </div>
+                </div>
+
+                @section js{
+                    <script>
+                        $(document).ready(function () {
+                            $('#tblId').dataTable({
+                                columnDefs: [
+                                    { orderable: false, targets: -1 }
+                                ]
+                            });
+                        });
+
+                    </script>
+                }
+

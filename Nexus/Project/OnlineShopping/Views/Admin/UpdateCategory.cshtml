@@ -1,0 +1,51 @@
+﻿@model OnlineShopping.Models.CategoryDetail
+@{
+    ViewBag.Title = "CategoryDetail";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item ">Categories</li>
+        <li class="breadcrumb-item active">Add New Category</li>
+
+
+    </ol>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Add New Category
+
+        </div>
+        <div class="card-body dashBx">
+
+                @using (Html.BeginForm("UpdateCategory", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="dashboardHD">
+                        @(Request.Url.ToString().ToLower().Contains("addcategory") ? "Add Category" : "Update Category")
+                    </div>
+                    <div class="dashformBx  dashformBx2 clearfix">
+                        @Html.HiddenFor(m => m.CategoryId)
+                        <div class="dashfrm-L">
+                            <label class="lblTxt">Category Name*</label>
+                            @Html.TextBoxFor(m => m.CategoryName, new { @class = "dashInp", @onkeypress = "return OnlyLegalCharacters();" })
+                            @Html.ValidationMessageFor(m => m.CategoryName)
+                        </div>
+                        <div class="clearfix"></div>
+                        <br />
+                       
+                        <div class="dashfrm-L submitBtns">
+                            <a onclick="window.history.back();" class="btn btn-danger" style="color:white">Cancel</a>                        
+                            <input type="submit" class="btn btn-primary" value="Save" onclick="return CheckValidInput(this);"/>
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>

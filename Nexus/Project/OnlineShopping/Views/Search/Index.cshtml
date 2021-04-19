@@ -1,0 +1,164 @@
+﻿@model IEnumerable<OnlineShopping.DAL.USP_Search_Result>
+@{ ViewBag.Title = "Search Result"; Layout = "~/Views/Shared/_FrontLayout.cshtml"; }
+<style>
+    .servicesBox .servicesImg img {
+        height: 172px;
+        width: 270px;
+    }
+
+    .DservicesImg img {
+        height: 162px;
+        width: 254px;
+    }
+
+    .FilterBox {
+        max-height: 200px;
+        overflow: auto;
+    }
+</style>
+<div class="brand-promotion">
+    <div class="container">
+        <div class="media row">
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 300ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>Ask Us Anything</h2>
+                        <p>Any Communication problem? Nexus is the right place to deal, <br />Ask us any time!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 400ms;">
+                    <i class="fa fa-laptop fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>
+                            Wireless Access
+                        </h2>
+                        <p>
+                            WiBAS-Connect compact all-outdoor MW radio offers high-quality broadband access
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 500ms;">
+                    <i class="fa fa-headphones fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>Full Support</h2>
+                        <p>Will be there for your service all the time, Become our member and have our support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/SLIDER SECTION -->
+<section id="home" class="sliderwrapper clearfix">
+
+    <div class="tp-banner-container">
+        <div class="tp-banner">
+            <ul>
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                    <!-- MAIN IMAGE -->
+                    <img src="~/demos/giphy.gif" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <div class="tp-dottedoverlay twoxtwo"></div>
+
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption rev-video  customin customout start"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="140"
+                         data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="1000"
+                         data-start="500"
+                         data-easing="Back.easeInOut"
+                         data-endspeed="300">
+                        <hr class="topline"><h2>Search<br>Available Products</h2><hr class="bottomline">
+                    </div>
+
+                    <!-- LAYER NR. 4 -->
+                    <div class="tp-caption rev-video2 customin customout start"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="340"
+                         data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="2200"
+                         data-start="500"
+                         data-easing="Back.easeInOut"
+                         data-endspeed="300">
+                        <p> Category wise</p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</section><!-- end slider-wrapper -->
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+@using (Html.BeginForm())
+{<div id="dvFilterSearch">
+        <div class="mainHouse">
+            <div class="container">
+                <div class="housekeeping clearfix">
+                    <div class="housekeepingLeft fl"><h1>@ViewBag.searchKey &nbsp; <span>@(!string.IsNullOrEmpty(ViewBag.searchKey) ? "I" : "")  &nbsp; @(Model != null ? Model.Count() : 0) records found</span></h1> </div>                     <div class="housekeepingRight fr" id="divFilter">
+                        <div class="housekeepingInput"><input type="text" placeholder="Enter Keywords" class="houseComn" id="searchKey" name="searchKey" value="@ViewBag.searchKey" onkeypress="return onlynumericOrCharacter();"></div>                         <div class="housekeepingSearch"><button type="button" class="housesearchBtn" onclick="$(this).parent().parent().submit();"><img src="/images/searchIcon.png" alt="img" /></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>         <div class="mainServices clearfix">
+            <div class="container">
+                <!-- Start servicesRight-->                 <div class="servicesRight">
+                    @if (Model.Count() > 0)
+                    {<!--Start pricelowHigh--> <div class="pricelowHigh clearfix">
+                            <!--Start Services Man-->                             <div class="tabContent" id="tab1">
+                                <div class="servicesPerson clearfix">
+                                    <ul class="prsonList">
+                                        @foreach (var item in Model)
+                                        {
+                                            <li>
+                                                <!--Start ServicesBox-->                                                 <div class="servicesBox">
+                                                    <div class="servicesImg">
+                                                        @if (File.Exists(Server.MapPath(System.Configuration.ConfigurationManager.AppSettings["ProductImage"] + "/Medium/" + item.ProductId + "_" + item.ProductImage)))
+                                                        {<img src="@(System.Configuration.ConfigurationManager.AppSettings["ProductImage"]+"/Medium/"+item.ProductId+ "_"+item.ProductImage)" alt="img"> }
+                                                        else
+                                                        { <img src="@(System.Configuration.ConfigurationManager.AppSettings["ProductImage_Default"])" alt="img">}
+                                                    </div>                                                     <div class="nameLink">                                                         <a title="View Product" href="/search/productDetail?pId=@item.ProductId">@item.ProductName</a>                                                         <div class="byperson clearfix">                                                             <h3>Category: @item.CategoryName</h3>                                                         </div>                                                     </div>                                                     <div class="rate clearfix">                                                         <span class="fl">Price</span>                                                         <span class="blueClr fr">@item.Price</span>                                                     </div>
+                                                </div>                                                 <!--End ServicesBox-->
+                                            </li>
+                                        }
+                                    </ul>                                     <!--End ServicesBox-->
+                                </div>                                 <!--End Services Man-->
+                            </div>
+                        </div> }
+                    else
+                    { <div class="tabContent" id="tab3">                             <!--Start Services Man-->                             <div class="clearfix">                                 <!--Start detailServicesBox-->                                 <div class="detailservicesBox clearfix">                                     <div style="background-color: #fff; text-align: center; padding: 40% 0; ">                                         <h2>No Records found</h2>                                     </div>                                 </div>                             </div>                         </div>}
+                </div>
+            </div>
+        </div>         <br />         <!--Start main services-->
+    </div>  } <!--End main services-->
+@section Scripts{
+    <script type="text/javascript">
+         $(document).ready(function () {
+            debugger
+        if('@TempData["ProductAddedToCart"]'!='')
+        {
+         swal('@TempData["ProductAddedToCart"]', '', 'success');
+        }
+        });
+      $('#searchKey').keydown(function (e) {
+        if (e.keyCode == 13) {
+        $('#dvFilterSearch').parent().submit();
+        }
+         })
+    </script>
+}

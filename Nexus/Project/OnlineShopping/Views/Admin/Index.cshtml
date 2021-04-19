@@ -1,0 +1,159 @@
+﻿@model OnlineShopping.Models.LoginViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout =  "~/Views/Shared/_FrontLayout.cshtml" ;
+}
+<html>
+<head>
+    <link href="/CSS/admin_stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <style>
+        .AdminLogin {
+            margin: 7% 30%;
+            padding: 6% 10%;
+            background: rgb(236, 233, 233);
+        }
+
+        .dashinp {
+            margin-bottom: 10px;
+        }
+
+        .SignIn {
+            text-align: center;
+            padding: 5PX 30PX;
+            background-color: rgb(30, 95, 209);
+            color: #FFF;
+            margin: 10% 0 10% 30%;
+        }
+
+        .forgot {
+            margin-top: 8%;
+            font-size: 14px;
+        }
+    </style>
+    <div class="brand-promotion">
+        <div class="container">
+            <div class="media row">
+                <div class="col-sm-4">
+                    <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 300ms;">
+                        <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                        <div class="media-body">
+                            <h2>Ask Us Anything</h2>
+                            <p>Any Communication problem? Nexus is the right place to deal, <br />Ask us any time!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 400ms;">
+                        <i class="fa fa-laptop fa-4x pull-left"></i>
+                        <div class="media-body">
+                            <h2>
+                                Wireless Access
+                            </h2>
+                            <p>
+                                WiBAS-Connect compact all-outdoor MW radio offers <br />high-quality broadband access
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 500ms;">
+                        <i class="fa fa-headphones fa-4x pull-left"></i>
+                        <div class="media-body">
+                            <h2>Full Support</h2>
+                            <p>Will be there for your service all the time,<br /> Become our member<br /> and have our support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/SLIDER SECTION -->
+    <section id="home" class="sliderwrapper clearfix">
+
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                <ul>
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                        <!-- MAIN IMAGE -->
+                        <img src="~/demos/giphy.gif" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                        <div class="tp-dottedoverlay twoxtwo"></div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption rev-video  customin customout start"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="140"
+                             data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="500"
+                             data-easing="Back.easeInOut"
+                             data-endspeed="300">
+                            <hr class="topline"><h2>ADMIN<br>LOGIN</h2><hr class="bottomline">
+                        </div>
+
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption rev-video2 customin customout start"
+                             data-x="center"
+                             data-hoffset="0"
+                             data-y="340"
+                             data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="2200"
+                             data-start="500"
+                             data-easing="Back.easeInOut"
+                             data-endspeed="300">
+                            <p>Fill the form below </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </section><!-- end slider-wrapper -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="AdminLogin">
+        @using (Html.BeginForm("Index", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <h1 style="text-align: center; margin-bottom: 20px">Admin Login</h1>
+            <div class="loginDetail">
+                @Html.TextBoxFor(m => m.UserEmailId, new { @class = "dashinp", @placeholder = "Username" })
+                @Html.ValidationMessageFor(m => m.UserEmailId)
+
+                @Html.PasswordFor(m => m.Password, new { @type = "password", @class = "dashinp", @placeholder = "Password" })
+                @Html.ValidationMessageFor(m => m.Password)
+
+                <label style="display: none;">@Html.RadioButton("UserType", 1, new { @checked = "checked", }) Admin</label>
+
+                <div class="forgot clearfix" style="display: none;">
+                    @Html.CheckBoxFor(m => m.RememberMe, new { @class = "csscheck" })
+                    <label for="RememberMe" class="csslabel fl">Keep Me Signed In</label>
+                    <a class="fgt fr" href="/Account/ForgotPassword">Forgot Password?</a>
+                </div>
+                <div class="forgot clearfix">
+                    <input type="checkbox" name="RememberMe1" class="csscheck" id="c1" checked>
+                    <label for="c1" class="csslabel">Remember me</label>
+                    <a href="/Account/ForgotPassword" class="fgt fr">Forgot Password?</a>
+                </div>
+                <input type="submit" value="Sign In" class="SignIn">
+            </div>
+        }
+    </div>
+
+    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+</body>
+</html>

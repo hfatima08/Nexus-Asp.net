@@ -1,0 +1,122 @@
+﻿@model OnlineShopping.DAL.Tbl_ShippingDetails
+@{
+    ViewBag.Title = "PaymentSuccess";
+    Layout = "~/Views/Shared/_FrontLayout.cshtml";
+}
+<div class="brand-promotion">
+    <div class="container">
+        <div class="media row">
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 300ms;">
+                    <i class="fa fa-lightbulb-o fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>Ask Us Anything</h2>
+                        <p>Any Communication problem? Nexus is the right place to deal, <br />Ask us any time!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 400ms;">
+                    <i class="fa fa-laptop fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>
+                            Wireless Access
+                        </h2>
+                        <p>
+                            WiBAS-Connect compact all-outdoor MW radio offers high-quality broadband access
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="brand-content wow fadeIn animated" style="visibility: visible; -webkit-animation: fadeIn 700ms 500ms;">
+                    <i class="fa fa-headphones fa-4x pull-left"></i>
+                    <div class="media-body">
+                        <h2>Full Support</h2>
+                        <p>Will be there for your service all the time, Become our member and have our support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/SLIDER SECTION -->
+<section id="home" class="sliderwrapper clearfix">
+
+    <div class="tp-banner-container">
+        <div class="tp-banner">
+            <ul>
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                    <!-- MAIN IMAGE -->
+                    <img src="~/demos/giphy.gif" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <div class="tp-dottedoverlay twoxtwo"></div>
+
+                    LAYER NR. 3
+                    <div class="tp-caption rev-video  customin customout start"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="140"
+                         data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="1000"
+                         data-start="500"
+                         data-easing="Back.easeInOut"
+                         data-endspeed="300">
+                        <hr class="topline"><h2>Your Order<br>Check details</h2><hr class="bottomline">
+                    </div>
+
+                    LAYER NR. 4
+                    <div class="tp-caption rev-video2 customin customout start"
+                         data-x="center"
+                         data-hoffset="0"
+                         data-y="340"
+                         data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                         data-speed="2200"
+                         data-start="500"
+                         data-easing="Back.easeInOut"
+                         data-endspeed="300">
+                        <p> All Details Are Given Below</p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</section> end slider-wrapper
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div id="dvFilterSearch" style="margin-top:30px;">
+    <div class="mainServices clearfix">
+        <div class="container">
+            <div style="background-color:white;margin-top:40px;padding:30px">
+                <h2 style="margin:20px;text-align:center;font-weight:bold;color:green;">
+                    Congratulations!!! Your Order is Placed Successfully
+                </h2>
+                <div class="servicesRight1">
+                    <table>
+                        <tr><td><b>Payment Details:</b></td><td>&nbsp;</td></tr>
+                        <tr><td>Order Id:</td><td>@Model.OrderId</td></tr>
+                        <tr><td>Amount Paid:</td><td>@Model.AmountPaid</td></tr>
+                        <tr><td>Payment Type:</td><td>@Model.PaymentType</td></tr>
+                        <tr><td><b>&nbsp;</b></td><td>&nbsp;</td></tr>
+                        <tr><td><b>Shipping Details:</b></td><td>&nbsp;</td></tr>
+                        <tr><td>Address:</td><td>@Model.AddressLine</td></tr>
+                        <tr><td>City:</td><td>@Model.City </td></tr>
+                        <tr><td>State:</td><td>@Model.State</td></tr>
+                        <tr><td>Country:</td><td>@Model.Country</td></tr>
+                        <tr><td>Zip Code:</td><td>@Model.ZipCode</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
